@@ -1,8 +1,8 @@
 title: Shamik Mitra Majumdar # your name (or website title) here
 logo: "/images/pic1.jpeg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  I am a second year student from BITS Pilani K.K. Birla Goa Campus. My interests include Deep Learning and Finance. 
-  <br><br><br><br>
+  I am a second year student from BITS Pilani K.K.Birla Goa Campus. My interests include Deep Learning and Finance. 
+  <br><br><br>
   <a href="https://www.linkedin.com/in/shamik-mitra-majumdar-273855184/">View My LinkedIn Profile</a>
   
 theme: jekyll-theme-minimal
