@@ -22,7 +22,8 @@ header {
 .header-links {
     display: flex;
     align-items: center;
-    gap: 1.5vw;
+    gap: 12px;
+    flex-shrink: 0;          /* icons keep their size; the title shrinks instead */
 }
 
 .header-links a {
@@ -30,8 +31,8 @@ header {
 }
 
 .header-links svg {
-    width: 5vh;
-    height: 5vh;
+    width: clamp(24px, 6vw, 34px);
+    height: clamp(24px, 6vw, 34px);
     fill: #000;           /* black & white */
     transition: opacity 0.2s ease;
 }
@@ -42,7 +43,8 @@ header {
 
 .header-text {
     margin: 0;
-    font-size: 250%;
+    min-width: 0;                          /* allow it to shrink instead of overflowing */
+    font-size: clamp(1.3rem, 4vw, 2.5rem); /* scales, but stays readable on phones */
     font-family: 'Courier New', Courier, monospace;
     font-weight: lighter;
     color: rgb(0, 0, 0);
@@ -60,8 +62,7 @@ header {
 
 .box {
     flex: 0 0 auto;
-    width: 40vw;                /* desktop / laptop */
-    max-width: 450px;           /* keep them sane on wide monitors */
+    width: min(90vw, 450px);    /* ~90% of screen on phones, capped at 450px on desktop */
     background-color: #efe3d3;
     color: rgb(0, 0, 0);
     display: flex;
@@ -96,9 +97,4 @@ header {
     font-size: 0.95rem;
     line-height: 1.4;
     color: #4a4a4a;
-}
-
-/* Phone → wider so the single box fills the screen nicely */
-@media (max-width: 600px) {
-    .box { width: 85vw; }
 }
